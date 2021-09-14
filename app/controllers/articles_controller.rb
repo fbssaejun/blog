@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  def show
+    @article = Article.find(params[:id])
+  end
+  
   def new
   end
 
@@ -8,4 +12,5 @@ class ArticlesController < ApplicationController
     @article.save
     redirect_to @article
   end
+
 end
